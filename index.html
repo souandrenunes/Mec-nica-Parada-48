@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina Mecânica em Curicica | Parada 48 - Diagnóstico Transparente</title>
+    <meta name="description" content="Procurando mecânico de confiança em Curicica e Jacarepaguá? A Parada 48 oferece revisão, suspensão e injeção eletrônica com garantia de 6 meses e zero invenção de defeitos. Agende seu diagnóstico.">
+    <meta name="keywords" content="Oficina mecânica Curicica, mecânico Jacarepaguá, revisão automotiva, injeção eletrônica, conserto de suspensão, mecânico de confiança">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --red-brand: #d32f2f;
+            --red-hover: #b71c1c;
+            --dark-gray: #1a1a1a;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --text-main: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-main);
+            background-color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-gray);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* BUTTONS */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--red-brand);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+            text-align: center;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--red-hover);
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            max-height: 60px; /* Ajuste a altura conforme necessário */
+            width: auto;
+            display: block;
+        }
+
+        .contact-info {
+            font-weight: 500;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #cccccc;
+        }
+
+        .pre-headline {
+            color: var(--red-brand);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* PROBLEM SECTION */
+        .problem {
+            padding: 80px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .problem h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .problem p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            font-size: 1.1rem;
+        }
+
+        /* METHOD T.R.E.S SECTION */
+        .method {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .method h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid var(--red-brand);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        /* OFFER SECTION */
+        .offer {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .offer h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .offer-box {
+            background-color: #222222;
+            border: 2px solid var(--red-brand);
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        .offer-box ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .offer-box ul li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .offer-box ul li::before {
+            content: '✔';
+            color: var(--red-brand);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 80px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 50px 0 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #aaaaaa;
+        }
+
+        .footer-highlight {
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        /* FLOATING WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .offer-box { padding: 20px; }
+            .header-content { flex-direction: column; gap: 15px; }
+            .logo-img { max-height: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container header-content">
+            <!-- LOGO INSERIDA AQUI -->
+            <a href="#" aria-label="Página Inicial">
+                <img src="logo.jpg" alt="Mecânica Parada 48 Logo" class="logo-img">
+            </a>
+            <div class="contact-info">
+                📞 (21) 92000-2209 | Curicica, RJ
+            </div>
+        </div>
+    </header>
+
+    <!-- DOBRA 1: HERO (A PROMESSA) -->
+    <section class="hero">
+        <div class="container">
+            <span class="pre-headline">📍 Atendimento Especializado para Curicica, Jacarepaguá e Região</span>
+            <h1>Seu Carro Seguro e Sua Mente Tranquila:<br>A Oficina que Resolve o Problema Sem Inventar Defeitos.</h1>
+            <p>Mais de 20 anos de experiência automotiva aplicados em diagnósticos 100% transparentes. Especialistas em Revisão, Suspensão e Injeção Eletrônica.</p>
+            <a href="https://wa.me/5521920002209" target="_blank" class="btn-cta">🔴 AGENDAR MEU DIAGNÓSTICO PELO WHATSAPP</a>
+        </div>
+    </section>
+
+    <!-- DOBRA 2: AGITAÇÃO DA DOR -->
+    <section class="problem">
+        <div class="container">
+            <h2>Cansado de entrar na oficina por um barulho e sair com um orçamento que custa o seu salário?</h2>
+            <p>Nós sabemos como é. O mercado automotivo está cheio de "achismos", peças trocadas sem necessidade e orçamentos que dobram de valor do dia para a noite.</p>
+            <p>Você não deveria precisar ser um especialista em mecânica para não ser enganado. O que você busca é simples: <strong>um diagnóstico preciso, um preço justo e a certeza de que sua família viajará em segurança.</strong></p>
+            <p>É exatamente por isso que a Mecânica Parada 48 existe.</p>
+        </div>
+    </section>
+
+    <!-- DOBRA 3: A SOLUÇÃO (MÉTODO T.R.E.S.) -->
+    <section class="method">
+        <div class="container">
+            <h2>Conheça o Protocolo T.R.E.S. de Manutenção</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>T - Transparência Total</h3>
+                    <p>Não trocamos peças para adivinhar o defeito. Você recebe uma explicação lógica e visual do real estado do seu carro. A verdade nua e crua, sem enrolação.</p>
+                </div>
+                <div class="card">
+                    <h3>R - Resolução Definitiva</h3>
+                    <p>Foco absoluto na causa-raiz. Nossa equipe liderada pelo Adonias possui expertise prática desde 2004 para entregar uma execução técnica impecável.</p>
+                </div>
+                <div class="card">
+                    <h3>S - Segurança em Dobro</h3>
+                    <p>Esqueça os 3 meses de garantia do mercado. Utilizando nossas peças originais validadas, você ganha <strong>6 meses de garantia total estendida</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 4: A OFERTA IRRECUSÁVEL -->
+    <section class="offer">
+        <div class="container">
+            <h2>O nosso serviço mais requisitado:<br>A Revisão Blindada P48</h2>
+            <p>Muito além de uma simples troca de óleo. Uma varredura completa na saúde do seu veículo.</p>
+            
+            <div class="offer-box">
+                <ul>
+                    <li><strong>Diagnóstico Investigativo Completo:</strong> Avaliação técnica aprofundada (se você fechar o serviço conosco, o valor do diagnóstico inicial é 100% abonado).</li>
+                    <li><strong>Especialidade:</strong> Análise milimétrica de Suspensão, Freios e Injeção Eletrônica.</li>
+                    <li><strong>BÔNUS CORTESIA:</strong> Lavagem técnica superficial do cofre do motor. Seu carro impecável por dentro e por fora.</li>
+                </ul>
+                <div style="text-align: center;">
+                    <a href="https://wa.me/5521920002209" target="_blank" class="btn-cta">🔴 QUERO RESERVAR MINHA REVISÃO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 5 & 6: AMBIENTE E SOBRE NÓS -->
+    <section class="about">
+        <div class="container">
+            <h2>Um ambiente seguro e acolhedor para todos.</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px auto;">A Parada 48 rompe com o estereótipo das oficinas antigas. Criamos um espaço pautado pelo respeito e pela clareza, especialmente desenhado para que <strong>mulheres motoristas</strong> sintam-se 100% seguras e confortáveis. Aqui, entregamos consultoria, respondemos a todas as dúvidas e tratamos seu patrimônio com a máxima idoneidade.</p>
+            
+            <h2>Muito prazer, somos a Parada 48.</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Uma jornada de paixão por motores que começou em 2004. De ajudante a especialista em diagnósticos complexos na rua, o Adonias fundou a Parada 48 em 2018 com um único propósito: provar que é possível entregar mecânica de altíssimo nível com honestidade inegociável.</p>
+        </div>
+    </section>
+
+    <!-- DOBRA 7: RODAPÉ -->
+    <footer>
+        <div class="container">
+            <h2>Traga o seu carro. Nós cuidamos do resto.</h2>
+            <div class="footer-highlight">
+                <p>📍 R. André Rocha, 3465 - Curicica, Rio de Janeiro - RJ, 22710-561</p>
+                <p>🕒 Segunda a Sexta, até as 18h</p>
+                <p>📞 WhatsApp: (21) 92000-2209</p>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.8rem;">Copyright © Mecânica Parada 48. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5521920002209" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.49.652.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
